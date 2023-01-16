@@ -9,8 +9,8 @@ form.addEventListener("submit", (event) => {
   //Obteniendo los valores de los campos del formulario
   const { name, email, message } = form.elements;
   
-  //Validando que el nombre solo contenga letras
-  if (!/^[a-zA-Z]+$/.test(name.value)) {
+  //Validando que el nombre solo contenga letras permitiendo espacios
+  if (!/^[a-zA-Z\s]+$/.test(name.value)) {
     isValid = false;
     errorDiv.innerHTML += `<div style='background-color:red; color:white; padding:5px;'>El Nombre solo debe contener letras!</div>`;
   }
